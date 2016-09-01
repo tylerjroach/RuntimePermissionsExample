@@ -97,7 +97,7 @@ public class CameraPermissionsDialogFragment extends DialogFragment{
   private void showAppSettingsDialog() {
     new AlertDialog.Builder(context)
         .setTitle("Permissions Required")
-        .setMessage("In order to take photos, access to the camera, microphone, and storage is needed. Please enable these permissions from the app settings.")
+        .setMessage("In order to record videos, access to the camera, microphone, and storage is needed. Please enable these permissions from the app settings.")
         .setPositiveButton("App Settings", new DialogInterface.OnClickListener() {
           @Override public void onClick(DialogInterface dialogInterface, int i) {
             Intent intent = new Intent();
@@ -118,7 +118,7 @@ public class CameraPermissionsDialogFragment extends DialogFragment{
   private void showRetryDialog() {
     new AlertDialog.Builder(context)
         .setTitle("Permissions Declined")
-        .setMessage("In order to take photos, the app needs access to the camera, microphone, and storage.")
+        .setMessage("In order to record videos, the app needs access to the camera, microphone, and storage.")
         .setPositiveButton("Retry", new DialogInterface.OnClickListener() {
           @Override public void onClick(DialogInterface dialogInterface, int i) {
             requestNecessaryPermissions();

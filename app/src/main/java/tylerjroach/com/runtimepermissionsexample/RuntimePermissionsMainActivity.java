@@ -32,7 +32,6 @@ public class RuntimePermissionsMainActivity extends AppCompatActivity implements
 
   @Override protected void onResume() {
     super.onResume();
-
     if (isPermissionGranted()) {
       status.setText("All permissions granted. Ready to open Camera");
     } else {
