@@ -43,11 +43,12 @@ public class CameraPermissionsDialogFragment extends DialogFragment{
     super.onCreate(savedInstanceState);
     setStyle(STYLE_NO_TITLE, R.style.PermissionsDialogFragmentStyle);
     setCancelable(false);
-    requestNecessaryPermissions();
   }
 
   @Override public void onResume() {
     super.onResume();
+
+
     if (shouldResolve) {
       if (externalGrantNeeded) {
         showAppSettingsDialog();
@@ -60,6 +61,8 @@ public class CameraPermissionsDialogFragment extends DialogFragment{
           dismiss();
         }
       }
+    } else {
+      requestNecessaryPermissions();
     }
   }
 
