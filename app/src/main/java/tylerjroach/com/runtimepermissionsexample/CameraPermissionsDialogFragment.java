@@ -72,6 +72,7 @@ public class CameraPermissionsDialogFragment extends DialogFragment{
   @Override public void onRequestPermissionsResult(int requestCode,
       String permissions[], int[] grantResults) {
     shouldResolve = true;
+    shouldRetry = false;
 
     for (int i=0; i<permissions.length; i++) {
       String permission = permissions[i];
